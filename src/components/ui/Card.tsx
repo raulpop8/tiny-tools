@@ -16,7 +16,7 @@ export default function Card({
   const content = (
     <div
       className={`
-        rounded-xl border border-border bg-background p-6
+        rounded-xl border border-border bg-surface p-6
         transition-transform
         ${comingSoon
           ? "opacity-60 cursor-not-allowed"
