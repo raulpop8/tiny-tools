@@ -9,7 +9,7 @@ export default function ToolsPage() {
         </h1>
 
         <p className="text-foreground/80 leading-relaxed">
-          Small utilities designed to be simple, fast, and genuinely useful.
+          🛠 Small utilities designed to be simple, fast, and genuinely useful.
         </p>
       </div>
 
@@ -18,6 +18,31 @@ export default function ToolsPage() {
           title="Password Generator"
           description="Generate secure, customizable passwords."
           href="/tools/password-generator"
+          tag="Decision"
+        />
+
+        <Card
+          title="Random Words"
+          description="Generate random words for fun"
+          comingSoon
+        />
+
+        <Card
+          title="Quote Generator"
+          description="Get inspired with random quotes."
+          comingSoon
+        />
+
+        <Card
+          title="Philosophical Question"
+          description="Contemplate with random philosophical questions."
+          comingSoon
+        />
+
+        <Card
+          title="Ice Breaker Question"
+          description="Generate random ice breaker questions."
+          comingSoon
         />
 
         <Card
@@ -29,6 +54,30 @@ export default function ToolsPage() {
         <Card
           title="Gradient Generator"
           description="Create smooth CSS gradients visually."
+          comingSoon
+        />
+
+        <Card
+          title="What should I eat today?"
+          description="Generate random meal ideas."
+          comingSoon
+        />
+
+        <Card
+          title="What should I do today?"
+          description="Generate random activities."
+          comingSoon
+        />
+
+        <Card
+          title="What should I wear today?"
+          description="Generate random outfit ideas."
+          comingSoon
+        />
+
+        <Card
+          title="10-minute challenge"
+          description="Random mini-tasks to get things done."
           comingSoon
         />
 
@@ -49,6 +98,13 @@ export default function ToolsPage() {
           description="Compress images without losing quality."
           comingSoon
         />
+
+        <Card
+          title="10 Minute Challenge"
+          description="Random mini-tasks to get things done."
+          comingSoon
+        />
+
       </div>
     </section>
   );

@@ -1,18 +1,19 @@
 import Link from "next/link";
+import { TAGS } from "@/lib/tags";
 
 type CardProps = {
   title: string;
   description: string;
   href?: string;
-  comingSoon?: boolean;
+  comingSoon?: boolean; // status
+  tag?: string; // tag
 };
 
-export default function Card({
-  title,
-  description,
-  href,
-  comingSoon = false,
-}: CardProps) {
+export default function Card({ title, description, href, comingSoon = false, tag }: CardProps) {
+  const displayTag = comingSoon ? "Coming Soon" : tag;
+
+  const tagInfo = displayTag ? TAGS[displayTag] : null;
+
   const content = (
     <div
       className={`
@@ -24,26 +25,19 @@ export default function Card({
       `}
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-lg font-semibold">
-          {title}
-        </h3>
+        <h3 className="text-lg font-semibold">{title}</h3>
 
-        {comingSoon && (
-          <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-medium">
-            Coming soon
+        {tagInfo && (
+          <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${tagInfo.colorClass}`}>
+            {tagInfo.label}
           </span>
         )}
       </div>
 
-      <p className="mt-2 text-sm text-foreground/80 leading-relaxed">
-        {description}
-      </p>
+      <p className="mt-2 text-sm text-foreground/80 leading-relaxed">{description}</p>
     </div>
   );
 
-  if (comingSoon || !href) {
-    return content;
-  }
-
+  if (!href || comingSoon) return content;
   return <Link href={href}>{content}</Link>;
 }
