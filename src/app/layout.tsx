@@ -5,6 +5,11 @@ import Footer from "@/components/layout/Footer";
 export const metadata = {
   title: "Utility Hub",
   description: "A collection of useful tools and small games.",
+  icons: {
+    icon: "/favicon-v1.ico",
+    shortcut: "/favicon-v1.ico",
+    apple: "/favicon-v1.ico",
+  }
 };
 
 export default function RootLayout({

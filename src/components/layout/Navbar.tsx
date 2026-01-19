@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="border-b border-border bg-background">
       <nav className="max-w-6xl mx-auto p-4">
-        <div className="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-2">
+        <div className="flex items-center justify-between rounded-xl border-border bg-background px-4 py-2">
           <Link href="/" className="font-bold text-sm">
             Utility Hub
           </Link>
